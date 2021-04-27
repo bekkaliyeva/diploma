@@ -1,0 +1,245 @@
+/* -----------------------------------------
+	02. Main Navigation
+----------------------------------------- */
+
+.nav {
+  font-size: 11px;
+  letter-spacing: 2px;
+
+  #footer & {
+	  text-align: left;
+  }
+}
+
+.nav ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	position: relative;
+	z-index: 200;
+}
+
+.navigation {
+  // Functional Styles
+  // ===================================
+  li { position: relative; }
+  > li { display: inline-block; }
+  a { display: block; white-space: nowrap; }
+
+  ul {
+	text-align: left;
+	position: absolute;
+	z-index: 10;
+	visibility: hidden;
+	opacity: 0;
+	transition: transform .25s ease .2s, opacity .25s ease .2s, visibility 0s ease .35s;
+	transform: translate(0, 10px);
+	margin-left: 12px;
+  }
+
+  ul ul {
+	top: 12px;
+	left: 100%;
+	margin: 0;
+	transform: translate(-10px, 0);
+  }
+
+  > li:first-child {
+	ul {
+	  margin-left: 0;
+	}
+  }
+
+  li:hover {
+	> ul {
+	  transition-delay: 0s, 0s, 0s;
+	  visibility: visible;
+	  opacity: 1;
+	}
+
+	ul {
+	  z-index: 15;
+	}
+  }
+
+  /* Styles duplicated here for IE11 support */
+  li:focus-within {
+	> ul {
+	  transition-delay: 0s, 0s, 0s;
+	  visibility: visible;
+	  opacity: 1;
+	}
+
+	ul {
+	  z-index: 15;
+	}
+  }
+
+  > li:hover > ul {
+	transform: translate(0, 0);
+  }
+
+  li li:hover > ul {
+	transform: translate(0, 0);
+  }
+
+  > .nav-open-left {
+	ul {
+	  right: 0;
+	}
+
+	ul ul {
+	  right: 100%;
+	  left: auto;
+	}
+  }
+
+  li {
+	.nav-open-left {
+	  ul {
+		right: 100%;
+		left: auto;
+	  }
+
+	  &.menu-item-has-children > a {
+		&::after {
+		  content: "\f053";
+		}
+	  }
+	}
+
+	&.nav-open-left {
+	  .menu-item-has-children > a {
+		&::after {
+		  content: "\f053";
+		}
+	  }
+	}
+  }
+
+  // Visual Styles
+  // ===================================
+
+  // Global Menu Link Styles
+  a {
+	position: relative;
+	color: $text-color;
+  }
+
+  // First Level Menu Links
+  // -----------------------------------
+
+  // Default Styles
+  > li > a {
+	margin: 0 12px;
+  }
+
+  > li:first-child {
+	> a {
+	  margin-left: 0;
+	}
+  }
+
+  // Active & Hover
+  > li:hover > a,
+  > li > a:focus,
+  > .current-menu-item > a,
+  > .current-menu-parent > a,
+  > .current-menu-ancestor > a,
+  > .current_page_item > a,
+  > .current_page_ancestor > a {
+	color: $link-color;
+  }
+
+  // Sub-menu containers
+  ul {
+	list-style: none;
+	min-width: 200px;
+	background: #ebebeb;
+	padding: 2px;
+  }
+
+  // Sub-Menu Links
+  // -----------------------------------
+
+  // Default Styles
+  li li a {
+	padding: 6px 15px;
+  }
+
+  // Active & Hover
+  li li:hover > a,
+  li li > a:focus,
+  li .current-menu-item > a,
+  li .current-menu-parent > a,
+  li .current-menu-ancestor > a,
+  li .current_page_item > a,
+  li .current_page_ancestor > a {
+	color: $link-color;
+  }
+
+  > li {
+	ul {
+	  a {
+		background: $white;
+		padding: 8px;
+		margin-bottom: 1px;
+		letter-spacing: 1px;
+		font-size: 10px;
+	  }
+	}
+
+	> ul {
+	  margin-top: 10px;
+	}
+  }
+
+  // Arrows
+  // -----------------------------------
+
+  // First Level (Facing Down)
+  .menu-item-has-children,
+  .page_item_has_children {
+	> a::after {
+	  font-family: "FontAwesome";
+	  content : "\f078";
+	  font-size: 8px;
+	  position: relative;
+	  top: -3px;
+	  right: -6px;
+	  line-height: normal;
+	}
+  }
+
+  // Sub-Menus (Facing Right)
+  li .menu-item-has-children,
+  li .page_item_has_children {
+	> a {
+	  padding-right: 25px;
+
+	  &::after {
+		font-family: "FontAwesome";
+		content : "\f054";
+		position: absolute;
+		right: 10px;
+		top: 50%;
+		transform: translateY(-50%);
+	  }
+	}
+  }
+}
+
+.mobile-nav-trigger {
+	font-size: 18px;
+	line-height: 1;
+	display: none;
+
+	&:active,
+	&:focus {
+		color: $text-color;
+	}
+}
+
+.mobile-nav-location {
+	display: none;
+}

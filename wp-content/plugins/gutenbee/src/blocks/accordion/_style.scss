@@ -1,0 +1,32 @@
+.wp-block-gutenbee-accordion {
+  margin: $base-block-vertical-spacing 0;
+
+  &-item {
+    margin-bottom: 0;
+  }
+
+  &-item-title {
+    line-height: normal;
+    margin: -1px 0 0;
+    padding: 15px;
+    border: 1px solid $border-color;
+    cursor: pointer;
+  }
+
+  &-item-content-wrap {
+    overflow: hidden;
+    display: none;
+  }
+
+  &-item-content {
+    padding: 15px;
+    border: 1px solid $border-color;
+    border-top: 0;
+
+    p {
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

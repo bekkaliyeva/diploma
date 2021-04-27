@@ -1,0 +1,77 @@
+@mixin clearfix() {
+	&:before,
+	&:after {
+		content: " "; /* 1 */
+		display: table; /* 2 */
+	}
+	&:after {
+		clear: both;
+	}
+}
+
+// Vertically center anything (IE9+),
+// remember to put -webkit-transform-style: preserve-3d; in parent element
+@mixin vertical-align {
+	position: relative;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+// Style placeholders
+@mixin placeholder {
+	::-webkit-input-placeholder {@content}
+	:-moz-placeholder           {@content}
+	::-moz-placeholder          {@content}
+	:-ms-input-placeholder      {@content}
+}
+
+// Ensuring text doesn't overflow its container and breaks nicely
+@mixin truncate-text($overflow: ellipsis) {
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: $overflow; // clip, ellipsis, or a string
+}
+
+// Loading spinner
+@mixin spinner {
+	width: 40px;
+	height: 40px;
+	background-color: #FFF;
+
+	border-radius: 100%;
+	-webkit-animation: scaleout 1.0s infinite ease-in-out;
+	animation: scaleout 1.0s infinite ease-in-out;
+}
+
+// Theme Specific Mixins
+@mixin font-style($fz: 13px) {
+	text-transform: uppercase;
+	font-size: $fz;
+	line-height: normal;
+	font-weight: 400;
+}
+
+@mixin select-style {
+	display: block;
+	width: 100%;
+	padding: 6px 15px;
+	border-radius: 0;
+	font-size: 14px;
+	height: 40px;
+	font-weight: normal;
+	border: 1px solid $border-color;
+	background: #FFF;
+}
+
+@mixin screen-reader-text {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	padding: 0;
+	overflow: hidden;
+	clip: rect(0,0,0,0);
+	border: 0;
+}

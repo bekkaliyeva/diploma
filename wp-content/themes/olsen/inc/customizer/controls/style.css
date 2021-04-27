@@ -1,0 +1,123 @@
+.customize-control-olsen-typography {
+  margin-bottom: 25px;
+}
+
+.olsen-typography-control-wrap {
+  position: relative;
+  margin-bottom: 12px;
+}
+
+.olsen-typography-control-split {
+  display: flex;
+  margin: 0 -3px 12px;
+}
+
+.olsen-typography-control-split .olsen-typography-control-wrap {
+  width: 50%;
+  margin: 0 3px;
+}
+
+body .select2-container {
+  z-index: 1000000;
+}
+
+.customize-control .select2-container {
+  z-index: 1;
+}
+
+.customize-control .select2-container .select2-selection--single {
+  height: 32px;
+}
+
+.customize-control .select2-container--default .select2-selection--single {
+  height: 32px;
+  border-color: #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.customize-control .select2-container--default .select2-selection--single .select2-selection__rendered {
+  color: #32373c;
+  line-height: 30px;
+}
+
+.customize-control .select2-container--default .select2-selection--single .select2-selection__arrow {
+  height: 30px;
+}
+
+.customize-control .select2-container--default .select2-results__option--highlighted[aria-selected] {
+  background-color: #0073aa;
+}
+
+.customize-control .select2-search--dropdown .select2-search__field {
+  border-color: #ddd;
+  border-radius: 4px;
+}
+
+#customize-control-instagram_auto {
+  padding-top: 20px;
+  border-top: 1px solid #D6D6D6;
+}
+
+#customize-control-home_slider .customize-control-checkbox .customize-inside-control-row {
+  padding: 0;
+}
+
+#customize-control-home_slider .customize-control-checkbox .description {
+  margin-bottom: 0;
+}
+
+.olsen-responsive-controls-tablet,
+.olsen-responsive-controls-mobile {
+  display: none;
+}
+
+.button-group-devices {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.button-group-devices button {
+  cursor: pointer;
+  background: 0 0;
+  border: none;
+  height: 26px;
+  padding: 0 1px;
+  margin: 0;
+  box-shadow: none;
+  border: 0;
+}
+
+.button-group-devices button:focus,
+.button-group-devices button:active {
+  box-shadow: none;
+}
+
+.button-group-devices button::before {
+  display: inline-block;
+  -webkit-font-smoothing: antialiased;
+  font: normal 15px/17px dashicons;
+  vertical-align: top;
+  margin: 0 0;
+  padding: 2px 4px;
+  color: #656a6f;
+}
+
+.button-group-devices .active::before {
+  color: #3498d8;
+}
+
+.button-group-devices .preview-desktop::before {
+  content: "\f472";
+}
+
+.button-group-devices .preview-tablet::before {
+  content: "\f471";
+}
+
+.button-group-devices .preview-mobile::before {
+  content: "\f470";
+}

@@ -1,0 +1,43 @@
+//
+// Margin controls styles
+//
+
+.gutenbee-control-margins {
+  margin: 1em 0 24px;
+
+  .components-base-control {
+    margin-bottom: 0;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.gutenbee-control-spacing-controls {
+  display: flex;
+
+  .components-base-control {
+    margin-bottom: 0 !important;
+
+    &:first-child {
+      .components-text-control__input {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+    }
+
+    &:last-child {
+      .components-text-control__input {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+      }
+    }
+
+    &:not(:first-child):not(:last-child) {
+      .components-text-control__input {
+        border-radius: 0;
+      }
+    }
+  }
+}

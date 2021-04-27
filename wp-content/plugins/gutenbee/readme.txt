@@ -1,0 +1,262 @@
+=== GutenBee - Gutenberg Blocks ===
+Contributors: cssigniterteam, silencerius, nvourva, tsiger, anastis
+Tags: gutenberg, blocks
+Requires at least: 5.4
+Tested up to: 5.7
+Stable tag: 2.10.3
+License: GPLv2 or later
+License URI: http://www.gnu.org/licen2ses/gpl-2.0.html
+Requires PHP: 5.6
+
+GutenBee enhances the Gutenberg editor with more blocks!
+
+== Description ==
+[GutenBee is a collection of elegant WordPress blocks](https://www.cssigniter.com/gutenbee/) enhancing your editing experience in the Gutenberg editor and vastly extending the potential of the new editor experience.
+
+Check out [the demo](https://www.cssigniter.com/gutenbee/) now!
+
+The plugin's documentation can be found [here](https://www.cssigniter.com/docs/gutenbee/).
+
+Here's the demo of one of our latest blocks, the Food Menu block
+
+https://www.youtube.com/watch?v=Wv_zwREKi68
+
+**Blocks:**
+
+* **Accordion**: Organize your content into accordion elements. All the content including titles can be edited directly in the WordPress editor and you can choose any color combination from the block’s settings.
+* **Banner**: Create beautiful and flexible banners on your site to capture user attention. Supports video backgrounds.
+* **Buttons**: Actionable content needs clickable buttons. Add one or more buttons, tweak their colors, borders and alignment and you're all set!
+* **Container**: A powerful container block allowing content grouping or splitting in columns, complete with fully responsive settings.
+* **Countdown**: Have an upcoming event? Pick a date directly inside the editor screen, choose your layout, colors, and typography and you’re ready!
+* **CountUp**: Maybe not every block counts, but this one does! Pick a starting and ending number, add a suffix or prefix, style it and you’re done!
+* **Divider**: Provide thematic content spacing with a fancy divider, edit its style, colors, and margins.
+* **Food Menu**: Display your dishes and drink offerings in a stylish fashion.
+* **Google Maps**: Easy-peasy fancy maps with the Google Maps block. Just enter a location and save, it just works! With support for beautiful predefined map styles and Snazzy custom map styles!
+* **Heading**: A normal heading block with responsive settings.
+* **Icon**: Display icons from a custom designed, curated list of over one hundred icons, with more icons being added in regular updates!
+* **Icon Box**: Your standard icon box block on steroids. Choose from over one hundred custom designed icons, style them any way and at any size you like, add some text and you’re good to go.
+* **Icon List**: Create lists with beautiful icons instead of bullets.
+* **Image**: A variation of the core Image block with extra responsive spacing and sizing settings.
+* **Image Box**: A standard image box with title and text block on steroids. Adjust your spacing, layout, alignment, or colors and typography.
+* **Image Comparison**: Need to showcase your photo editing skills or writing up a camera review? With the Image Comparison block you can enhance your posts with side-by-side comparison of any two photos you wish.
+* **Justified Gallery**: Create beautiful justified grid layout galleries inside any of your post or pages.
+* **Paragraph**: A variation of the core Paragraph block with responsive spacing settings.
+* **Progress Bar**: Add stylish progress bars and display either progress or your skillset with the most visually captivating way.
+* **Review**: Transform any post into a review. Score items individually, and average them out automatically.
+* **Slideshow**: Add a fancy slideshow to your posts or pages. Drag and drop your images, choose your settings and hit publish!
+* **Spacer**: Complete control spacing of elements in your posts and pages with the responsive Spacer block.
+* **Tabs**: Organize your content into fancy tabs. All the content including titles can be edited directly in the WordPress editor and you can choose any color combination from the block’s settings.
+* **Testimonial**: An easy to use block to help you display your testimonials with multiple layouts.
+* **Post Types**: List posts from any post type in a configurable grid, complete with fully responsive settings.
+* **Video**: Embed a video from your media library or upload a new one.
+* **Video Embed**: Embed videos from YouTube or Vimeo and lazy-load theme if you wish to.
+
+== Installation ==
+From within WordPress' dashboard:
+
+1. Go to Plugins -> Add New
+2. Search for "GutenBee"
+3. Click "Install"
+4. Click "Activate"
+5. New Gutenberg Blocks will appear!
+
+Note that if you want to use the Google Maps block you will also need a Google Maps API Key. Instruction can be found in GutenBee's settings page.
+
+== Screenshots ==
+1. GutenBee's fancy new blocks.
+2. Display your photos in beautiful slideshows.
+3. Create awesome looking justified galleries.
+4. Compare any two images.
+5. Flexible Google Maps block with custom map styles.
+6. Over a hundred icons to choose from with more being added regularly.
+7. Tabs or Accordions, group your content the way you want.
+
+== Changelog ==
+
+= 2.10.4 =
+* Fixed an infinite loop that was causing the Container block to crash in WP 5.7
+* Fixed issue with color pickers where they would open and close immediately in WP 5.7
+
+= 2.10.3 =
+* Fixed an issue where custom font sizes would not be applied in the editor for the Paragraph, Heading, Button, and Icon List blocks.
+* Fixed deprecations from version 2.6.x on Container, Divider, and Spacer blocks.
+
+= 2.10.2 =
+* Added the ability to mark Accordion tabs as default open
+* Fixed an issue where a background image would get repeated if you had nested Container blocks.
+* Fixed an issue where a background image would get repeated if you had nested Banner blocks.
+* Enable anchor on the Spacer block.
+
+= 2.10.1 =
+* Fix an issue that prevented JavaScript assets from being minified.
+* Updated all instances of window.load to avoid a race condition causing Firefox to not run the scripts occasionally (Banner block / Slideshow block)
+* Image block: Removed clearfix styling.
+* Banner block: Fixed an issue where the banner's background image would be hidden if it was inside a container with an overlay color.
+* Slideshow block: Remove all dependencies on jquery-migrate.
+
+= 2.10.0 =
+* Paragraph block's content can now be included in auto-generated excerpts.
+* Modernized CSS prefixes.
+* Added responsive background image on Container, Column, Banner, Spacer, Divider Blocks.
+* Fixed an issue where the responsive controls would not be clickable on dropdown controls (editor).
+* Accordion block: Fixed title background application in editor.
+* Accordion block: Fixed the title background color application in the editor.
+* Banner block: Fixed issue where box shadow would not get applied correctly.
+* Banner block: Fixed inset box shadow appearance in the editor.
+* Banner block: Fixed application of box shadow and border.
+* Banner block: Remove "noreferrer" attribute from link's rel when "new target" setting is enabled.
+* Buttons block: Remove "noreferrer" attribute from link's rel when "new target" setting is enabled.
+* Container block: Fixed a border radius issue when the block had a background overlay.
+* Container block: Fixed issue where box shadow would not get applied correctly if the zoom option was enabled on the background image.
+* Container block: Fixed an issue where the border would become clipped by parallax if it was enabled.
+* Container block: Fixed application of box shadow and border.
+* Container block: The container block's width will now fit any custom editor width.
+* Container block: Refactored width edge cases.
+* Countdown block: Adjust for the case where the default date was set and the countdown was expired.
+* Countdown block: Remove left and right margins from the first and last time element respectively.
+* Google Maps block: Fixed an issue with the settings toggle.
+* Icon block: Rearranged settings panels in editor.
+* Icon Box block: Renamed alignment settings to better reflect what they do.
+* Icon Box block: Fixed icon padding/margin.
+* Image block: Added link destination setting.
+* Image block: Fixed an issue where the image would overlap content if there was alignment in place (frontend).
+* Review block: Fixed a case where applying bold font weight to the score subtitle would change its appearance.
+* Review block: Fixed overflowing issues.
+* Review block: Removed explicit width so that it won't overlap containers if it has margin applied.
+* Tabs block: Tab navigation now becomes vertical on small viewports.
+
+= 2.9.0 =
+* Added Review block.
+* Video Embed block: Added option "Stick to bottom on scroll".
+* Post Type block: Themes may now opt in to user-selectable image sizes for specific post types.
+* Added Background zoom support for the Banner & Container blocks.
+* Added Background zoom option to BackgroundControl.
+* Added plugin option to modify editor width globally.
+* Added plugin option to modify inserter & appender button colors globally.
+* Front-end styles are now minified.
+* Added link to the GutenBee settings on the plugin listing page.
+* Renamed gutenbee_admin_styles() to gutenbee_admin_assets()
+* gutenbee_get_template_part()'s 4th parameter renamed to $args, in order for template parts to be compatible with any other standard template parts, since the $args parameter was added in get_template_part().
+* Fixed initial appender size on Banner block.
+* Fixed initial minimum height of Banner block.
+
+= 2.8.1 =
+* Fixed an issue with inner block wrappers caused by changes made in Gutenberg v9.2 / WordPress 5.6
+* Fixed an issue where some blocks would force the inspector controls to extend past the viewport.
+
+= 2.8.0 =
+* Added Banner block.
+* Added support for video background in the Container block.
+* Added filters 'gutenbee_enqueue_frontend_styles' and 'gutenbee_enqueue_frontend_scripts' to force enqueueing frontend assets.
+* UPDATED: Convert all internal block inline CSS rules from ID based to class based.
+* Merge all identical selector CSS rules in block inline styles.
+* Fixed an issue where in some blocks "undefined" would appear as a class.
+* Fixed an issue where the video block would break in the editor when adding padding/margin.
+* Added support for anchor links on all blocks.
+* Fixed issue where an empty element was output when no avatar was selected, or no quote text was set, in the Testimonial block.
+* Fixed minor spacing issues in the Testimonial element.
+* Added Toolbar button to clear avatar on the Testimonial block.
+* Added Visibility settings on all blocks.
+* Fixed an issue in the Video Embed block that caused it to crash in the editor when changing padding and margin settings.
+* Added self hosted video support for video backgrounds.
+* Added per Button font size control.
+* Fixed some undefined variables.
+* Fixed an issue where the border radius would not be migrated on Buttons.
+
+= 2.7.0 =
+* Added new "Icon List" block.
+* Added new "Testimonial" block.
+* Added new "Video Embed" block.
+* GutenBee block styles are loaded when the blocks are in reusable blocks.
+
+= 2.6.2 =
+* Fixed Post Type block support for custom classes.
+* Post Type block: Min-max columns are now filterable per post type (see 'gutenbee_block_post_types_post_types_columns').
+* Fixed an issue where heading colors would not be overridden by the applied text color.
+* Fixed an issue on the Icon block where deleting the icon input would invalidate the block.
+* Updated buttons on the poster image setting in the Video block.
+* Display initial values on the border settings.
+* Always display the border radius setting, regardless of the border style attribute.
+* Fixed handling of offset when used in combination with pagination in the Post Type block.
+
+= 2.6.1 =
+* Fixed an issue with the IconBox and the ImageBox blocks where if the font size was reset the block would break validation.
+
+= 2.6.0 =
+* Added new "Food Item" block.
+* Fixed an issue where the theme-grid option would be incompatible with fullwidth alignment in the container block.
+* Added background color for arrows and dots navigation in the Slideshow block.
+* Update all color pickers on all blocks with RGBA ones.
+* Changed the "Icon" and "Icon Box" blocks to render SVG for their icons instead of an icon font.
+* Fixed an issue where the "Icon Box" and "Image Box" blocks would not accept the paste command in their text inputs.
+* Front-end scripts and styles are now only enqueued when they are required by the GutenBee blocks used.
+* Fixed Spacer block's parallax setting.
+* Now the container block will remain selected when choosing columns from the initial layouts.
+* Updated default gutter size to "30px - large" in the container block (will not affect existing content).
+* Fixed an issue where the reverse column order settings in tablet and mobile would not take effect on the container block.
+* Fixed an issue where the styling would break on the Slideshow block if custom classes were added.
+* Fixed an issue where center aligned Image blocks would cause their images to be stretched on iOS.
+* Minor style adjustments.
+
+= 2.5.0 =
+* Fixed container block issue spacing when theme grid is on.
+* Fixed paragraph block border and box shadow application element.
+* Fixed an issue where the move handlers were being clipped when the container block was fullwidth.
+* Updated container block for WordPress 5.5 support.
+* Fixed container block direction setting in the editor
+* Fixed minor styling issue for blocks for WordPress 5.5 support
+* Added "Included posts" in Post Type block
+* Fixed an issue where the selected term in the post types block would not be preserved on subsequent page loads
+
+= 2.4.0 =
+* Added border and border radius settings on all blocks (except Tabs and Accordion).
+* Added box shadow settings on all blocks (except Tabs and Accordion).
+* Fixed an issue where custom classes would make some blocks break their styling.
+* Various editor UI fixes.
+
+= 2.3.2 =
+* Added link in image block.
+* Update Container block to work on WordPress 5.4
+* Added the ability to rearrange columns within the container block.
+* Fix container and column block hover controls from being inaccessible.
+
+= 2.3.1 =
+* Skipped.
+
+* Added New buttons block.
+= 2.3.0 =
+* Added New buttons block.
+* Added background overlay option for the container block.
+* Added responsive alignment options for the Heading / Paragraph blocks.
+* Added background color and spacing controls in image box and icon box blocks.
+* Added transformations from Heading to Paragraph and Paragraph to Heading.
+* Fixed an issue where the slider controls value would keep resetting on input blur.
+* Override fixed image attachment when in mobile.
+* Minor aesthetic fixes.
+* Container alignment settings now will inherit its desktop values over to the smaller breakpoints unless explicitly overridden.
+* Fixed single column width in container block to be 100%
+* Fixed visual alignment issues in image box and icon box blocks.
+* Fixed image attachment setting to be reverted when in mobile breakpoints.
+* Updated all block icons.
+* Fixed slideshow block.
+* Add new paragraph when return is pressed for GutenBee paragraph and heading blocks.
+* Fixed an issue with the Google Maps block where it would break in the editor if the height was adjusted.
+
+= 2.2.0 =
+* Added new video block.
+* Added responsive settings for blocks: ImageBox, Icon, IconBox.
+* Fixed responsive styles. Unset properties will not get applied.
+* Added font size in Heading block.
+* Fixed issue where Post Types block wouldn't respect WooCommerce's products visibility option.
+* Grouped block options in more relevant sections.
+* Fixed incorrect wording on labels.
+
+= 2.1.0 =
+* Added new blocks: Container, Heading, Paragraph, Image, Spacer, Post Types.
+
+= 2.0.9 =
+* Added new blocks: Accordion, Countdown, CountUp, Google Maps, Icon, Icon Box, Image Box, Image Comparison, Justified Gallery, Progress Bar, Slideshow, Tabs.
+* Removed the Spacer block.
+
+= 1.0.0 =
+* Initial release.
